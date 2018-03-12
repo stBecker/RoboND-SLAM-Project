@@ -8,9 +8,13 @@
   <arg name="gui" default="true"/>
   <arg name="headless" default="false"/>
   <arg name="debug" default="false"/>
+  
+  <arg name="camera" default="camera" />
+  <arg name="rgb_frame_id"   default="camera_rgb_optical_frame" />
+  <arg name="depth_frame_id" default="camera_depth_optical_frame" />
 
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(find udacity_bot)/worlds/jackal_race.world"/>
+    <arg name="world_name" value="$(find udacity_bot)/worlds/kitchen_dining.world"/>
     <arg name="paused" value="$(arg paused)"/>
     <arg name="use_sim_time" value="$(arg use_sim_time)"/>
     <arg name="gui" value="$(arg gui)"/>
@@ -22,7 +26,7 @@
 <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" 
 output="screen" args="-urdf -param robot_description -model udacity_bot"/>
 <!--launch rviz-->
-<node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d /home/robond/catkin_ws/src/udacity_bot/conf.rviz"/>
+<!-- <node name="rviz" pkg="rviz" type="rviz" respawn="false" args="-d /home/robond/catkin_ws/src/udacity_bot/conf.rviz"/> -->
 
 </launch>
 
