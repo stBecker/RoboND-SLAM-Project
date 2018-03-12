@@ -2,7 +2,7 @@
 
 <robot name="udacity_bot" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-  <xacro:include filename="$(find udacity_bot)/urdf/udacity_bot.gazebo" />  
+  <xacro:include filename="$(find slam_project)/urdf/udacity_bot.gazebo" />  
   <xacro:property name="M_PI" value="3.1415926535897931" />
   <link name="robot_footprint"></link>
 
@@ -166,7 +166,7 @@
     <visual>
       <origin xyz=" 0 0 0 " rpy="0 0 0" />
       <geometry>
-        <mesh filename="package://udacity_bot/meshes/kinect.dae"/>
+        <mesh filename="package://slam_project/meshes/kinect.dae"/>
       </geometry>
     </visual>
 
@@ -265,7 +265,7 @@
     <visual name='hokuyo_visual'>
       <origin xyz="0 0 0" rpy=" 0 0 0"/>
       <geometry>
-        <mesh filename="package://udacity_bot/meshes/hokuyo.dae"/>
+        <mesh filename="package://slam_project/meshes/hokuyo.dae"/>
       </geometry>
     </visual>
   </link>

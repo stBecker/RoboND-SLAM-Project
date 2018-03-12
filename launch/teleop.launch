@@ -1,5 +1,5 @@
 <launch>
   <!-- teleop already has its own built in velocity smoother -->
-  <node pkg="udacity_bot" type="teleop" name="turtlebot_teleop_keyboard"  output="screen">
+  <node pkg="slam_project" type="teleop" name="turtlebot_teleop_keyboard"  output="screen">
   </node>
 </launch>
