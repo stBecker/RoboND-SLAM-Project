@@ -26,7 +26,7 @@ then
  x-terminal-emulator -e roslaunch slam_project world.launch world_file:=/home/sb/catkin_ws/src/slam_project/worlds/kitchen_dining.world 2>/dev/null &
 
 else
- x-terminal-emulator -e roslaunch slam_project world.launch world_file:=$input_choice 2>/dev/null &
+ x-terminal-emulator -e roslaunch slam_project world2.launch world_file:=/home/sb/catkin_ws/src/slam_project/worlds/myworld.world 2>/dev/null &
 fi
 
 sleep 3 &&
